@@ -1,0 +1,743 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&family=Raleway:wght@100;200;300;400&display=swap');
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Raleway', sans-serif; */
+
+/* GENERAL */
+.adjustedPFont {
+    font-size: calc(10px + 0.25vw);
+}
+
+.textGreen {
+    color: #25ff75;
+}
+
+
+/* NAVIGATION BAR */
+.navbar {
+    background-color: #00000000;
+
+    font-size: 13.5px;
+    letter-spacing: 2px;
+    
+    position: absolute;
+    width: 100%;
+}
+
+.nav-item {
+    text-align: right;
+}
+
+.nav-link {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.navbar-dark .navbar-nav .nav-link, .navbar-dark .navbar-brand {
+    color: whitesmoke;
+}
+
+.navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link:hover {
+    color: #1ef4a2;
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+    border-bottom: 1px solid #1ef4a2;
+}
+
+
+/* HEADER */
+#header {
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: rgb(75, 75, 75);
+    /* background-color: rgb(52, 52, 52); */
+    background-blend-mode: multiply;
+    background-image: url("../images/background.jpg");
+    /* Image source: https://unsplash.com/photos/2Hzmz15wGik 
+        (pine watt) */
+
+    background-position: center;
+}
+
+#header #display {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    /* text-align: center; */
+    width: 70%;
+}
+
+
+#header #title{
+    /*
+    padding-left: 5vw;
+    padding-right: 5vw;
+    */
+
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+#headerName {
+    transition: text-shadow 0.3s ease-in-out;
+}
+
+#header #headerName:hover {
+    text-shadow: 1px 1px 12.5px rgba(150, 150, 150, 0.65);
+}
+
+#header #sub {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+
+    font-size: calc(12.5px + 0.25vw);
+}
+
+
+#header img {
+    width: calc(50px + 3.5vw);
+    height: calc(50px + 3.5vw);
+
+    border-radius: 50%;
+    outline: 4.5px solid whitesmoke;
+
+    /*
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -65%;
+    */
+}
+
+
+#headerSocial {
+    position: absolute;
+    bottom: calc(15px + 0.5vw);
+    right: calc(15px + 0.5vw);
+
+    text-align: end;
+}
+
+#headerSocial ul {
+    list-style: none;
+    margin-bottom: 0;
+}
+
+#headerSocial a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: calc(10.5px + 0.25vw);
+    letter-spacing: 1px;
+
+    transition: color 0.2s ease-in-out;
+}
+
+#headerSocial a:hover {
+    color: rgb(185, 185, 185);
+}
+
+
+/* PROGRAMS */
+#programs {
+    min-height: 100vh;
+    background-color:rgb(0, 0, 0, 0.9);
+}
+
+#programsText {
+    max-width: 90%;
+    margin-top: 125px;
+    margin-bottom: 125px;
+}
+
+#programsText h2 {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+#programsText p {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: calc(10.5px + 0.25vw);
+}
+
+
+
+
+
+/* WEBSITES */
+#websites {
+    min-height: 100vh;
+    background-color:rgb(0, 0, 0, 0.875);
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    padding-top: 125px;
+    padding-bottom: 125px;
+}
+
+#websitesText {
+    /*width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;*/
+
+    text-align: center;
+}
+
+#websitesText h2 {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+#websitesText p {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: calc(10.5px + 0.25vw);
+}
+
+/* [WEBSITES] CARDS */
+#websitesScroll {
+    width: 90%;
+    overflow-x: auto;    
+
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+#websitesRow {
+    display: flex;
+    width: fit-content;
+
+    /* This will align cards in center when not overflow-x */
+    margin-left: auto;
+    margin-right: auto;
+
+    /* In case #websitesScroll sets a height */
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#websitesRow .card {
+    margin: 5px;
+
+    border: 0;
+    border-radius: 0;
+
+    background-color:rgba(60, 60, 60, 0.65);
+    color: whitesmoke;
+    
+    flex: 1; /* doesn't break current code, but helps make all cards the same width if missing a fixed width */
+
+
+    -webkit-box-shadow: 0 2.5px 0 -1px #1ef4a2;
+    -moz-box-shadow: 0 2.5px 0 -1px #1ef4a2;
+    box-shadow: 0 2.5px 0 -1px #1ef4a2;
+
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+#websitesRow .card:hover {
+    -webkit-box-shadow:0px 4px 0px -1px #1ef4a2;
+    -moz-box-shadow: 0px 4px 0px -1px #1ef4a2;
+    box-shadow: 0px 4px 0px -1px #1ef4a2;
+}
+
+#websitesRow .cardImg {
+    width: 100%;
+    /*background-color: rgb(56, 56, 56);*/
+    background-color: rgba(130, 130, 130, 0.5);
+
+    aspect-ratio: 16 / 9;
+
+    display: block;
+
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-blend-mode: multiply;
+
+    background-position: center;
+}
+
+@supports not (aspect-ratio: 16 / 9) {
+    #websitesRow .cardImg {
+        padding-bottom: 56.25%;
+    }
+    
+    #websitesRow .cardImg::after {
+        content: "";
+    }
+}
+
+#websitesRow .card-body {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+
+    /* MOVE BTN TO BOTTOM OF CARD - REMOVE THIS CSS TO REVERT */
+    display: flex;
+    flex-direction: column;
+}
+
+/* MOVE BTN TO BOTTOM OF CARD - REMOVE THIS CSS TO REVERT */
+#websitesRow .btn, #websitesRow .btn-group {
+    width: fit-content;
+    margin-top: auto;
+}
+
+#websitesRow .cardHeader {
+    display:block;
+    margin-bottom: 7.5px; /* Need display: block to do this */
+
+    color: #1ef4a2;
+    /* font-family: 'Source Sans Pro', sans-serif; */
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+
+    font-size: calc(7.25px + 0.25vw);
+
+    text-transform: uppercase;
+}
+
+#websitesRow .card-title {
+    font-size: calc(12.5px + 0.5vw);
+}
+
+#websitesRow .card-text {
+    font-size: calc(10.5px + 0.25vw);
+    letter-spacing: calc(0.25px + 0.02vw);
+}
+
+#websitesRow .card .btn {
+    border-radius: 0;
+
+    background-color: transparent;
+    color: #1ef4a2;
+
+    border-color: #1ef4a2;
+
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: calc(9.25px + 0.25vw);
+}
+
+#websitesRow .card .btn:hover {
+    background-color: #1ef4a2;
+    color: whitesmoke;
+    /* color: rgba(60, 60, 60, 0.65); */
+}
+
+#websitesRow .card .dropdown-menu {
+    background-color: rgba(60, 60, 60, 0.85);
+    border-radius: 0;
+}
+
+#websitesRow .card .dropdown-menu .dropdown-divider {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+
+    border: none;
+    background-color: rgba(255, 255, 255, 0.65);
+    opacity: 1;
+    height: 1px;
+}
+
+#websitesRow .card .dropdown-menu .dropdown-item {
+    background-color: transparent;
+
+    text-transform: uppercase;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: calc(9.25px + 0.25vw);
+
+    color: whitesmoke;
+
+    transition: color ease-in-out 0.3s, box-shadow ease-in-out 0.3s;
+}
+
+#websitesRow .card .dropdown-menu li:hover .dropdown-item {
+    -webkit-box-shadow: inset 4px 0px 0px -1px #1ef4a2;
+    -moz-box-shadow: inset 4px 0px 0px -1px #1ef4a2;
+    box-shadow: inset 4px 0px 0px -1px #1ef4a2;
+
+    color: #1ef4a2;
+}
+
+
+/* GRAPHICS */
+#graphics {
+    min-height: 100vh;
+    background-color:rgb(0, 0, 0, 0.9);
+}
+
+#graphicsText {
+    max-width: 90%;
+    margin-top: 125px;
+    margin-bottom: 125px;
+}
+
+#graphicsText h2 {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+#graphicsText p {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: calc(10.5px + 0.25vw);
+}
+
+
+/* [GRAPHICS] CAROUSEL */
+.carouselWrapper {
+    width: 100%;
+
+    /*
+    margin-top: 50px;
+    margin-bottom: 50px;
+    */
+}
+
+.carouselContent{
+    padding-left: 12.5%;
+    padding-right: 12.5%;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/* SEE ADDITIONAL CAROUSEL CSS IN THE RESPONSIVE CSS FILES */
+
+.carouselContent .graphicsRow .graphicsCol {
+    margin: 5px;
+}
+
+/* 
+This should be used for darker overlay especially for first setup of .carouselBoxContent 
+(see below).
+*/
+.carouselBoxDiv:hover {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+/* Wrapping .carouselBoxDiv method for link */
+.carouselBoxLinkWrap {
+    width: 100%;
+}
+.carouselBoxContentWrapper button {
+    color: rgba(255, 255, 255, 0.65);
+    background-color: transparent;
+
+    border: none;
+
+    margin: 0;
+    padding: 0;
+
+    text-align: left;
+    
+    /* Needed so button will wrap around text in the event it takes up multiple lines*/
+    display: contents; 
+    pointer-events: initial;
+}
+.carouselBoxContentWrapper button:hover {
+    color: #1ef4a2;
+}
+.carouselBoxContentWrapper button:active {
+    background-color: transparent;
+}
+
+/* Overlaying .carouselBoxDiv method for link */
+/* allows link to overlay the parent div, note that parent div has to have position: relative */
+.carouselBoxLink {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    z-index: 1; /* needed or else link is not clickable */
+}
+.carouselBoxContentWrapper a {
+    position: relative; /* needed or else link inside carouselBox is not clickable */
+    z-index: 2; /* needs to be higher than overlay link (.carouselBoxLink) */
+
+    /* color: whitesmoke; */
+    color: rgba(255, 255, 255, 0.65);
+    text-decoration: none;
+
+    transition: color ease-in-out 0.3s;
+}
+.carouselBoxContentWrapper a:hover {
+    color: #1ef4a2;
+}
+
+
+/* JS EDITED: SMOOTH ANIMATED W JQUERY, SEE CUSTOM.JS */
+/*
+.carouselBoxDiv:not(:hover) .carouselBoxContent {
+    display: none;
+}
+*/
+
+.carouselBoxDiv {
+    position: relative;
+    width: 100%;
+    
+    /* background-color:whitesmoke; */
+    background-color: rgba(130, 130, 130, 0.5);
+    transition: background-color ease-in-out 0.3s; /* SET THIS AS SAME DURATION AS .carouselBoxContent IN CUSTOM.JS */
+
+    display: block;
+    /*padding-bottom: 100%;*/ /* padding-bottom % based on width */
+    /*aspect-ratio: 1 / 1;*/
+
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-blend-mode: multiply;
+
+    background-position: center;
+}
+
+.graphicsCol .carouselBoxDiv {
+    /*padding-bottom: 100%;*/ /* padding-bottom % based on width */
+    aspect-ratio: 1 / 1;
+}
+
+@supports not (aspect-ratio: 1 / 1) {
+    .graphicsCol .carouselBoxDiv {
+        padding-bottom: 100%; /* padding-bottom % based on width */
+    }
+
+    .graphicsCol .carouselBoxDiv::after {
+        content: ""; /* Needed so the div would appear */
+    }
+}
+
+.programsCol .carouselBoxDiv {
+    aspect-ratio: 4 / 3;
+}
+
+@supports not (aspect-ratio: 4 / 3) {
+    .programsCol .carouselBoxDiv {
+        padding-bottom: 75%; /* padding-bottom % based on width */
+    }
+
+    .programsCol .carouselBoxDiv::after {
+        content: ""; /* Needed so the div would appear */
+    }
+}
+
+/* THIS SETUP CAUSE .carouselBoxContent HEIGHT TO WRAP CONTENT */
+/*
+.carouselBoxContent {
+    bottom: 0;
+
+    max-height: 100%;
+
+    overflow-y: auto;
+}
+*/
+
+/* THIS SETUP CAUSE .carouselBoxContent TO COVER THE ENTIRE carouselBox DIV */
+.carouselBoxContent {
+    height: 100%;
+
+    display: none;        /* JS EDITED: SMOOTH ANIMATED W JQUERY, SEE CUSTOM.JS */
+    /* display: flex; */    /* JS EDITED: SMOOTH ANIMATED W JQUERY, SEE CUSTOM.JS */
+    flex-direction: column;
+}
+
+/* set content (text) to be vertically and horizontally aligned at center */
+.programsCol .carouselBoxContent {
+    justify-content: center;
+    text-align: center;
+}
+.programsCol .carouselBoxContent .carouselBoxContentTagsContainer {
+    justify-content: center; /* to align tags to center */
+}
+
+/* set content (text) to be vertically aligned at end */
+.graphicsCol .carouselBoxContent {
+    justify-content: end;
+}
+
+
+/* GENERAL carouselBox CONTENT */
+.carouselBoxContent {
+    position: absolute;
+
+    width: 100%;
+
+    /* overflow-y: auto */ /* needs to be in abs setup, does not work with flex setup */
+
+    /* Can use background-color to test the difference between the two .carouselBoxContent setup if needed */
+    /* background-color:rgb(185, 185, 185); */
+
+    /*background-color:rgba(70, 70, 70, 0.45);*/
+    /* color: #212529; */ /* for dark color text */
+    color: whitesmoke;
+}
+
+
+.carouselBoxContentWrapper {
+    /* 
+    div that wraps around the inner contents (ex. text) 
+    this is needed as display: flex breaks overflow-y (flex does not work with overflow)
+    */
+
+    width: 100%;
+
+    overflow-y: auto;
+    padding: 15px; /* padding needs to be inside or else there will be overflow-x*/
+}
+
+
+.carouselBoxContentWrapper * {
+    margin-bottom: 5px;
+}
+
+.carouselBoxContentHeading {
+    font-size: calc(12.5px + 0.5vw);
+}
+
+.carouselBoxContentBody {
+    font-size: calc(9.5px + 0.35vw);
+    margin-bottom: 15px;
+}
+
+.carouselBoxContentTagsContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.carouselBoxContentTag {
+    margin-bottom: 5px;
+
+    width: fit-content;
+    /*border: 1px solid #212529; */ /* for dark color border */
+    border: 1px solid whitesmoke;
+    text-transform: uppercase;
+}
+
+
+/* FOOTER */
+#footer {
+    min-height: 200px;
+    height: fit-content;
+
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+
+    display: flex;
+    align-items: center;
+
+    background-color:rgba(0, 0, 0, 0.9);
+    color: whitesmoke;
+}
+
+#socmedia {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#leftside {
+    display: flex;
+    align-items: center;
+}
+
+#leftside > * {
+    margin: 0 25px;
+}
+
+#leftside > *:not(hr) {
+    padding: 25px 0;
+}
+
+#footerLinks {
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+    margin-bottom: 7.5px;
+}
+
+#footerLinks a {
+    color: whitesmoke;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    transition: color 0.2s ease-in-out;
+}
+
+#footerLinks a:hover {
+    color:#1ef4a2;
+}
+
+#leftside hr {
+    /* default CSS hr border styles*/
+    border-style: inset; 
+    border-width: 1px;
+    /* default CSS hr opacity*/
+    opacity: 1;
+}
+
+#leftside hr {
+    align-self: stretch;
+}
+
+#leftside #subtext * {
+    font-size: calc(10px + 0.25vw);
+    letter-spacing: 0.25px;
+}
+
+#leftside #subtext p {
+    margin-bottom: 0;
+}
+
+#socmedia p {
+    text-transform: uppercase;
+    letter-spacing: 0.25px;
+}
+
+#socmediaIcons {
+    display: flex;
+    align-items: center;
+}
+
+#socmediaIcons img {
+    height: calc(25px + 0.5vw);
+    width: calc(25px + 0.5vw);
+}

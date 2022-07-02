@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Anna Zheng's Portfolio</title>
+
+        <!-- JQuery CDN -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+        <!-- JavaScript File -->
+	    <script src="js/custom.js"></script>
+
+
+        <!-- Bootstrap CDN -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+        <!-- Bootstrap Font Icon CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+
+
+        <!-- Media query for narrow browser width -->
+        <link rel="stylesheet" media="only screen and (max-width: 480px)" href="css/mobile.css">
+
+        <!-- Media query for medium browser width -->
+        <link rel="stylesheet" media="only screen and (min-width: 481px) and (max-width: 960px)" href="css/tablet.css">
+
+        <!-- Media query for full browser width -->
+        <link rel="stylesheet" media="only screen and (min-width: 961px)" href="css/desktop.css">
+
+
+        <link href="css/external.css" type="text/css" rel="stylesheet"/>
+        
+	</head>
+	<body>
+        <!-- NAVIGATION BAR -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+
+                <a class="navbar-brand mb-0 h1" href="#">AZ</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#programs">Programs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#websites">Websites</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#graphics">Graphics</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+
+
+        <div class = "container-fluid">
+
+            <!-- HEADER CONTENT -->
+            <div class = "row">
+                <div class="col-md-12 text-white" id = "header">
+                    <!-- CENTER DISPLAY -->
+                    <div id = "display">
+                        <img src = "images/birb.jpg"/>
+                        <div id = "headerText">
+                            <h1 id = "title">Welcome to <span class = "textGreen" id = "headerName">Anna Zheng's</span> Portfolio</h1>
+                            <hr>
+                            <div id = "sub">
+                                <p>
+                                    Code, Design, Create. Contact me at <span>anna.zheng@nyu.edu</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BOTTOM RIGHT ABSOLUTE SOCIAL MEDIA LIST -->
+                    <div id = "headerSocial">
+                        <ul>
+                            <li><a href = "https://github.com/azheng9096">GitHub</a></li>
+                            <li><a href = "https://nyu.joinhandshake.com/stu/users/27360975">Handshake</a></li>
+                            <li><a href = "https://www.linkedin.com/in/anna-zheng-965866203/">LinkedIn</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- PROGRAMS -->
+            <div class = "row" id = "programs">
+                <div class = "col-md-3 text-white d-flex flex-column justify-content-center align-items-center">
+
+                    <div id = "programsText" class = "text-center text-md-start">
+                        <h2>Programs</h2>
+                        <p>Coding projects</p>
+                    </div>
+
+                </div>
+
+                <div class = "col-md-9 d-flex align-items-center justify-content-center">
+                    <div class = "carouselWrapper"> <!-- carousel wrapper div to work with parent flex-->
+
+                        <div id="carouselPrograms" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselPrograms" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselPrograms" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="w-100 carouselContent">
+
+                                        <div class = "programsRow">
+                                            <div class = "programsCol">
+
+                                                <a href = "https://github.com/azheng9096/MetalSlug2C" class = "carouselBoxLinkWrap">
+                                                    <div class = "carouselBoxDiv" style = "background-image: url('https://github.com/azheng9096/MetalSlug2C/raw/master/Game%20Plan/MS_Title_Screen.png')">
+                                                        <!-- 
+                                                            .carouselBoxLink overlays the entire .carouselBoxDiv so the entire div is clickable 
+                                                            This is preferred over wrapping the entire .carouselBoxDiv in an <a> tag (.carouselBoxLinkWrap method)
+                                                                <a> <div> </div> </a>
+                                                            because <a> tags cannot be nested!!! Option to make certain text within clickable would be limited
+                                                                Wrapping entire .carouselBoxDiv in an <a> tag means that a <button> should be used instead
+                                                                for the nested <a>.
+
+                                                            However, .carouselBoxLink method breaks the overflow - the .carouselBoxLink stays on top of the content, 
+                                                            (.carouselBoxContentWrapper) so the content scrollbar cannot be used.
+
+                                                            With .carouselBoxLinkWrap method, need to use JavaScript (see custom.js), or else clicking on button will 
+                                                            just cause the ancestor <a> href to be triggered instead of onclick
+                                                        -->
+                                                        <!--<a href = "https://github.com/azheng9096/MetalSlug2C" class = "carouselBoxLink"></a>-->
+                                                        
+                                                        <div class = "carouselBoxContent">
+
+                                                            <!-- wrapper is needed as display flex in parent div breaks overflow-y (flex doesnt work with overflow) -->
+                                                            <div class = "carouselBoxContentWrapper">
+
+                                                                <h5 class = "carouselBoxContentHeading">Metal Slug 2C</h5>
+                                                                <p class = "carouselBoxContentBody">
+                                                                    Semi-recreation of Metal Slug 2 in Python using <button onclick = "location.href='https://www.pygame.org'">Pygame</button>
+                                                                </p>
+                                                                <div class = "carouselBoxContentTagsContainer">
+                                                                    <p class = "carouselBoxContentTag">Python</p>
+                                                                    <p class = "carouselBoxContentTag">Pygame</p>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </a>
+
+                                            </div>
+
+                                            <div class = "programsCol">
+                                                
+                                                <a href = "https://github.com/azheng9096/EncryptionDecryption" class = "carouselBoxLinkWrap">
+                                                    <div class = "carouselBoxDiv" style = "background-image: url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070')">
+                                                        <!-- Image source: https://unsplash.com/photos/iar-afB0QQw
+                                                            (Markus Spiske) -->
+                                                        <!-- <a href = "https://github.com/azheng9096/EncryptionDecryption" class = "carouselBoxLink"></a> -->
+                                                        <div class = "carouselBoxContent">
+                                                            
+                                                            <div class = "carouselBoxContentWrapper">
+
+                                                                <h5 class = "carouselBoxContentHeading">Encryption Decryption</h5>
+                                                                <p class = "carouselBoxContentBody">
+                                                                    High school junior project - 
+                                                                    developing an encryption algorithm based around Caesar Cipher and numeric system conversions.
+                                                                </p>
+                                                                <div class = "carouselBoxContentTagsContainer">
+                                                                    <p class = "carouselBoxContentTag">Java</p>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </a>
+
+                                            </div>
+                                        </div>
+
+                                        <div class = "programsRow">
+
+                                            <div class = "programsCol">
+
+                                                <!-- Add a href to the anchor to make it clickable / redirectable -->
+                                                <a class = "carouselBoxLinkWrap">
+                                                    <div class = "carouselBoxDiv">
+                                                        <!-- <a class = "carouselBoxLink"></a> -->
+                                                        <div class = "carouselBoxContent">
+
+                                                            <div class = "carouselBoxContentWrapper">
+
+                                                                <h5 class = "carouselBoxContentHeading">Coming Soon</h5>
+                                                                <p class = "carouselBoxContentBody">
+                                                                    Please anticipate its arrival.
+                                                                </p>
+                                                                <div class = "carouselBoxContentTagsContainer">
+                                                                    <p class = "carouselBoxContentTag">TBD</p>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </a>
+
+                                            </div>
+
+                                            <div class = "programsCol">
+
+                                                <!-- Add a href to the anchor to make it clickable / redirectable -->
+                                                <a class = "carouselBoxLinkWrap">
+                                                    <div class = "carouselBoxDiv">
+                                                        <!-- <a class = "carouselBoxLink"></a> -->
+                                                        <div class = "carouselBoxContent">
+
+                                                            <div class = "carouselBoxContentWrapper">
+
+                                                                <h5 class = "carouselBoxContentHeading">Coming Soon</h5>
+                                                                <p class = "carouselBoxContentBody">
+                                                                    Please anticipate its arrival.
+                                                                </p>
+                                                                <div class = "carouselBoxContentTagsContainer">
+                                                                    <p class = "carouselBoxContentTag">TBD</p>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </a>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="w-100 carouselContent">
+
+                                        <div class = "programsRow">
+
+                                            <div class = "programsCol">
+
+                                                <!-- Add a href to the anchor to make it clickable / redirectable -->
+                                                <a class = "carouselBoxLinkWrap">
+                                                    <div class = "carouselBoxDiv">
+                                                        <!-- <a class = "carouselBoxLink"></a> -->
+                                                        <div class = "carouselBoxContent">
+
+                                                            <div class = "carouselBoxContentWrapper">
+
+                                                                <h5 class = "carouselBoxContentHeading">Coming Soon</h5>
+                                                                <p class = "carouselBoxContentBody">
+                                                                    Please anticipate its arrival.
+                                                                </p>
+                                                                <div class = "carouselBoxContentTagsContainer">
+                                                                    <p class = "carouselBoxContentTag">TBD</p>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </a>
+
+                                            </div>
+
+                                            <div class = "programsCol">
+
+                                                <!-- Add a href to the anchor to make it clickable / redirectable -->
+                                                <a class = "carouselBoxLinkWrap">
+                                                    <div class = "carouselBoxDiv">
+                                                        <!-- <a class = "carouselBoxLink"></a> -->
+                                                        <div class = "carouselBoxContent">
+
+                                                            <div class = "carouselBoxContentWrapper">
+
+                                                                <h5 class = "carouselBoxContentHeading">Coming Soon</h5>
+                                                                <p class = "carouselBoxContentBody">
+                                                                    Please anticipate its arrival.
+                                                                </p>
+                                                                <div class = "carouselBoxContentTagsContainer">
+                                                                    <p class = "carouselBoxContentTag">TBD</p>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </a>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class = "programsRow">
+
+                                            <div class = "programsCol">
+
+                                                <!-- Add a href to the anchor to make it clickable / redirectable -->
+                                                <a class = "carouselBoxLinkWrap">
+                                                    <div class = "carouselBoxDiv">
+                                                        <!-- <a class = "carouselBoxLink"></a> -->
+                                                        <div class = "carouselBoxContent">
+
+                                                            <div class = "carouselBoxContentWrapper">
+
+                                                                <h5 class = "carouselBoxContentHeading">Coming Soon</h5>
+                                                                <p class = "carouselBoxContentBody">
+                                                                    Please anticipate its arrival.
+                                                                </p>
+                                                                <div class = "carouselBoxContentTagsContainer">
+                                                                    <p class = "carouselBoxContentTag">TBD</p>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </a>
+
+                                            </div>
+
+                                            <div class = "programsCol">
+
+                                                <!-- Add a href to the anchor to make it clickable / redirectable -->
+                                                <a class = "carouselBoxLinkWrap">
+                                                    <div class = "carouselBoxDiv">
+                                                        <!-- <a class = "carouselBoxLink"></a> -->
+                                                        <div class = "carouselBoxContent">
+
+                                                            <div class = "carouselBoxContentWrapper">
+
+                                                                <h5 class = "carouselBoxContentHeading">Coming Soon</h5>
+                                                                <p class = "carouselBoxContentBody">
+                                                                    Please anticipate its arrival.
+                                                                </p>
+                                                                <div class = "carouselBoxContentTagsContainer">
+                                                                    <p class = "carouselBoxContentTag">TBD</p>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </a>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselPrograms" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselPrograms" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- WEB -->
+            <div class = "row">
+
+                <div class = "col-md-12" id = "websites">
+
+                    <!-- TEXT -->
+                    <div id = "websitesText" class = "text-white">
+                        <h2>Websites</h2>
+                        <p>Includes both frontend and backend</p>
+                    </div>
+
+                    <!-- CARDS -->
+                    <div id = "websitesScroll">
+                        <div id = "websitesRow">
+
+                            <!-- CARD -->
+                            <div class="card">
+                                <!-- CARD IMG -->
+                                <div class = "cardImg" style = "background-image: url('images/interest_index.html.png');"></div>
+
+                                <div class="card-body">
+                                    <small class = "cardHeader">RESPONSIVE, INTERACTIVE, JQUERY</small>
+                                    <h5 class="card-title">[Interest] Arknights</h5>
+                                    <p class="card-text">
+                                        Responsive and interactive website showcasing an interest (Arknights). 
+                                        Please especially note that artist names in Characters page is clickable. 
+                                    </p>
+                                    <a href="https://azheng9096.github.io/Arknights-Website/" class="btn">Visit Website</a>
+                                </div>
+                            </div>
+
+
+                            <!-- CARD -->
+                            <div class="card">
+                                <!-- CARD IMG -->
+                                <div class = "cardImg" style = "background-image: url('images/CH-Insp_index.html.png');"></div>
+
+                                <div class="card-body">
+                                    <small class = "cardHeader">WEB VR, A-FRAME</small>
+                                    <h5 class="card-title">CH-Insp v2</h5>
+                                    <p class="card-text">
+                                        An elementary introduction and exploration of A-Frame with 3D models. 
+                                        Extension to CH-Insp (without 3D models).
+                                    </p>
+                                    <div class="btn-group">
+                                        <a class="btn" href = "https://azheng9096.github.io/CH-Insp-v2/">Visit Website</a>
+                                        <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <span class="visually-hidden">Toggle Dropdown</span>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="https://azheng9096.github.io/CH-Insp/">Visit CH-Insp</a></li>
+                                            <li><hr class="dropdown-divider"></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- CARD -->
+                            <div class="card">
+                                <!-- CARD IMG -->
+                                <div class = "cardImg" style = "background-image: url('images/JavaPokemonDatabase_HomepageV2.html.png');"></div>
+
+                                <div class="card-body">
+                                    <small class = "cardHeader">SQL, DATABASE, ROUTING, JAVA</small>
+                                    <h5 class="card-title">Pokemon Database</h5>
+                                    <p class="card-text">
+                                        Pokemon database website. Familiarizing with SQL and using Java to handle routing. 
+                                        Utilizes Bootstrap for design.
+                                    </p>
+                                    <a href="https://github.com/azheng9096/JavaPokemonDatabase" class="btn">Visit Repository</a>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <!-- CARD IMG -->
+                                <div class = "cardImg"></div>
+
+                                <div class="card-body">
+                                    <small class = "cardHeader">TBD</small>
+                                    <h5 class="card-title">Coming Soon</h5>
+                                    <p class="card-text">
+                                        Please anticipate its arrival.
+                                    </p>
+                                    <!-- add href and change text when available -->
+                                    <a class="btn">Currently Unavailable</a>
+                                </div>
+                            </div>
+
+                            
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <!-- GRAPHICS -->
+            <div class = "row" id = "graphics">
+
+                <div class = "col-md-3 text-white d-flex flex-column justify-content-center align-items-center">
+
+                    <div id = "graphicsText" class = "text-center text-md-start">
+                        <h2>Graphics</h2>
+                        <p>Design focused/related work</p>
+                    </div>
+
+                </div>
+
+                <div class = "col-md-9 d-flex align-items-center justify-content-center">
+                    <div class = "carouselWrapper"> <!-- carousel wrapper div to work with parent flex-->
+
+                        <!-- CAROUSEL WITH ITEMS -->
+                        <div id="carouselGraphics" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+                            <!-- Carousel Indicators -->
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselGraphics" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselGraphics" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            </div>
+
+                            <!-- Carousel Items -->
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="w-100 carouselContent">
+                                        <div class="graphicsRow">
+                                            <div class = "graphicsCol">
+
+                                                <a href = "https://github.com/azheng9096/Python-Turtle-Graphics" class = "carouselBoxLinkWrap">
+                                                
+                                                    <div class = "carouselBoxDiv" style = "background-image: url('https://raw.githubusercontent.com/azheng9096/Python-Turtle-Graphics/main/FFVI%20Cactuar.PNG')">
+                                                        <!-- 
+                                                            .carouselBoxLink overlays the entire .carouselBoxDiv so the entire div is clickable 
+                                                            This is preferred over wrapping the entire .carouselBoxDiv in an <a> tag (.carouselBoxLinkWrap method)
+                                                                <a> <div> </div> </a>
+                                                            because <a> tags cannot be nested!!! Option to make certain text within clickable would be limited
+                                                                Wrapping entire .carouselBoxDiv in an <a> tag means that a <button> should be used instead
+                                                                for the nested <a>.
+
+                                                            However, .carouselBoxLink method breaks the overflow - the .carouselBoxLink stays on top of the content, 
+                                                            (.carouselBoxContentWrapper) so the content scrollbar cannot be used.
+
+                                                            With .carouselBoxLinkWrap method, need to use JavaScript (see custom.js), or else clicking on button will 
+                                                            just cause the ancestor <a> href to be triggered instead of onclick
+                                                        -->
+                                                        <!-- <a href = "https://github.com/azheng9096/Python-Turtle-Graphics" class = "carouselBoxLink"></a> -->
+                                                        
+                                                        <div class = "carouselBoxContent">
+
+                                                            <!-- wrapper is needed as display flex in parent div breaks overflow-y (flex doesnt work with overflow) -->
+                                                            <div class = "carouselBoxContentWrapper">
+
+                                                                <h5 class = "carouselBoxContentHeading">Python Graphics</h5>
+                                                                <p class = "carouselBoxContentBody">
+                                                                    Flags and pixel art made with <button onclick="location.href='https://docs.python.org/3/library/turtle.html'">Python Turtle</button>
+                                                                </p>
+                                                                <div class = "carouselBoxContentTagsContainer">
+                                                                    <p class = "carouselBoxContentTag">Python</p>
+                                                                    <p class = "carouselBoxContentTag">Python Turtle</p>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+
+                                                </a>
+                                                
+
+                                            </div>
+                                            <div class = "graphicsCol">
+                                                
+                                                <!-- Add a href to the anchor to make it clickable / redirectable -->
+                                                <a class = "carouselBoxLinkWrap">
+                                                    <div class = "carouselBoxDiv">
+                                                        <!-- <a class = "carouselBoxLink"></a> -->
+                                                        <div class = "carouselBoxContent">
+
+                                                            <div class = "carouselBoxContentWrapper">
+
+                                                                <h5 class = "carouselBoxContentHeading">Coming Soon</h5>
+                                                                <p class = "carouselBoxContentBody">
+                                                                    Please anticipate its arrival.
+                                                                </p>
+                                                                <div class = "carouselBoxContentTagsContainer">
+                                                                    <p class = "carouselBoxContentTag">TBD</p>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </a>
+
+                                            </div>
+                                            <div class = "graphicsCol">
+                                                
+                                                <!-- Add a href to the anchor to make it clickable / redirectable -->
+                                                <a class = "carouselBoxLinkWrap">
+                                                    <div class = "carouselBoxDiv">
+                                                        <!-- <a class = "carouselBoxLink"></a> -->
+                                                        <div class = "carouselBoxContent">
+
+                                                            <div class = "carouselBoxContentWrapper">
+
+                                                                <h5 class = "carouselBoxContentHeading">Coming Soon</h5>
+                                                                <p class = "carouselBoxContentBody">
+                                                                    Please anticipate its arrival.
+                                                                </p>
+                                                                <div class = "carouselBoxContentTagsContainer">
+                                                                    <p class = "carouselBoxContentTag">TBD</p>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </a>
+
+                                            </div>
+                                        </div>
+                                        <div class="graphicsRow">
+                                            <div class = "graphicsCol">
+
+                                                <!-- Add a href to the anchor to make it clickable / redirectable -->
+                                                <a class = "carouselBoxLinkWrap">
+                                                    <div class = "carouselBoxDiv">
+                                                        <!-- <a class = "carouselBoxLink"></a> -->
+                                                        <div class = "carouselBoxContent">
+
+                                                            <div class = "carouselBoxContentWrapper">
+
+                                                                <h5 class = "carouselBoxContentHeading">Coming Soon</h5>
+                                                                <p class = "carouselBoxContentBody">
+                                                                    Please anticipate its arrival.
+                                                                </p>
+                                                                <div class = "carouselBoxContentTagsContainer">
+                                                                    <p class = "carouselBoxContentTag">TBD</p>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </a>
+
+
+                                            </div>
+                                            <div class = "graphicsCol">
+                                                
+                                                <!-- Add a href to the anchor to make it clickable / redirectable -->
+                                                <a class = "carouselBoxLinkWrap">
+                                                    <div class = "carouselBoxDiv">
+                                                        <!-- <a class = "carouselBoxLink"></a> -->
+                                                        <div class = "carouselBoxContent">
+
+                                                            <div class = "carouselBoxContentWrapper">
+
+                                                                <h5 class = "carouselBoxContentHeading">Coming Soon</h5>
+                                                                <p class = "carouselBoxContentBody">
+                                                                    Please anticipate its arrival.
+                                                                </p>
+                                                                <div class = "carouselBoxContentTagsContainer">
+                                                                    <p class = "carouselBoxContentTag">TBD</p>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </a>
+
+
+                                            </div>
+                                            <div class = "graphicsCol">
+
+                                                <!-- Add a href to the anchor to make it clickable / redirectable -->
+                                                <a class = "carouselBoxLinkWrap">
+                                                    <div class = "carouselBoxDiv">
+                                                        <!-- <a class = "carouselBoxLink"></a> -->
+                                                        <div class = "carouselBoxContent">
+
+                                                            <div class = "carouselBoxContentWrapper">
+
+                                                                <h5 class = "carouselBoxContentHeading">Coming Soon</h5>
+                                                                <p class = "carouselBoxContentBody">
+                                                                    Please anticipate its arrival.
+                                                                </p>
+                                                                <div class = "carouselBoxContentTagsContainer">
+                                                                    <p class = "carouselBoxContentTag">TBD</p>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="w-100 carouselContent">
+                                        <div class="graphicsRow">
+                                            <div class = "graphicsCol">
+
+                                                <!-- Add a href to the anchor to make it clickable / redirectable -->
+                                                <a class = "carouselBoxLinkWrap">
+                                                    <div class = "carouselBoxDiv">
+                                                        <!-- <a class = "carouselBoxLink"></a> -->
+                                                        <div class = "carouselBoxContent">
+
+                                                            <div class = "carouselBoxContentWrapper">
+
+                                                                <h5 class = "carouselBoxContentHeading">Coming Soon</h5>
+                                                                <p class = "carouselBoxContentBody">
+                                                                    Please anticipate its arrival.
+                                                                </p>
+                                                                <div class = "carouselBoxContentTagsContainer">
+                                                                    <p class = "carouselBoxContentTag">TBD</p>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </a>
+
+                                            </div>
+                                            <div class = "graphicsCol">
+                                                
+                                                <!-- Add a href to the anchor to make it clickable / redirectable -->
+                                                <a class = "carouselBoxLinkWrap">
+                                                    <div class = "carouselBoxDiv">
+                                                        <!-- <a class = "carouselBoxLink"></a> -->
+                                                        <div class = "carouselBoxContent">
+
+                                                            <div class = "carouselBoxContentWrapper">
+
+                                                                <h5 class = "carouselBoxContentHeading">Coming Soon</h5>
+                                                                <p class = "carouselBoxContentBody">
+                                                                    Please anticipate its arrival.
+                                                                </p>
+                                                                <div class = "carouselBoxContentTagsContainer">
+                                                                    <p class = "carouselBoxContentTag">TBD</p>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </a>
+
+                                            </div>
+                                            <div class = "graphicsCol">
+                                                
+                                                <!-- Add a href to the anchor to make it clickable / redirectable -->
+                                                <a class = "carouselBoxLinkWrap">
+                                                    <div class = "carouselBoxDiv">
+                                                        <!-- <a class = "carouselBoxLink"></a> -->
+                                                        <div class = "carouselBoxContent">
+
+                                                            <div class = "carouselBoxContentWrapper">
+
+                                                                <h5 class = "carouselBoxContentHeading">Coming Soon</h5>
+                                                                <p class = "carouselBoxContentBody">
+                                                                    Please anticipate its arrival.
+                                                                </p>
+                                                                <div class = "carouselBoxContentTagsContainer">
+                                                                    <p class = "carouselBoxContentTag">TBD</p>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </a>
+
+                                            </div>
+                                        </div>
+                                        <div class="graphicsRow">
+                                            <div class = "graphicsCol">
+
+                                                <!-- Add a href to the anchor to make it clickable / redirectable -->
+                                                <a class = "carouselBoxLinkWrap">
+                                                    <div class = "carouselBoxDiv">
+                                                        <!-- <a class = "carouselBoxLink"></a> -->
+                                                        <div class = "carouselBoxContent">
+
+                                                            <div class = "carouselBoxContentWrapper">
+
+                                                                <h5 class = "carouselBoxContentHeading">Coming Soon</h5>
+                                                                <p class = "carouselBoxContentBody">
+                                                                    Please anticipate its arrival.
+                                                                </p>
+                                                                <div class = "carouselBoxContentTagsContainer">
+                                                                    <p class = "carouselBoxContentTag">TBD</p>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </a>
+
+                                            </div>
+                                            <div class = "graphicsCol">
+
+                                                <!-- Add a href to the anchor to make it clickable / redirectable -->
+                                                <a class = "carouselBoxLinkWrap">
+                                                    <div class = "carouselBoxDiv">
+                                                        <!-- <a class = "carouselBoxLink"></a> -->
+                                                        <div class = "carouselBoxContent">
+
+                                                            <div class = "carouselBoxContentWrapper">
+
+                                                                <h5 class = "carouselBoxContentHeading">Coming Soon</h5>
+                                                                <p class = "carouselBoxContentBody">
+                                                                    Please anticipate its arrival.
+                                                                </p>
+                                                                <div class = "carouselBoxContentTagsContainer">
+                                                                    <p class = "carouselBoxContentTag">TBD</p>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </a>
+
+                                            </div>
+                                            <div class = "graphicsCol">
+                              
+                                                <!-- Add a href to the anchor to make it clickable / redirectable -->
+                                                <a class = "carouselBoxLinkWrap">
+                                                    <div class = "carouselBoxDiv">
+                                                        <!-- <a class = "carouselBoxLink"></a> -->
+                                                        <div class = "carouselBoxContent">
+
+                                                            <div class = "carouselBoxContentWrapper">
+
+                                                                <h5 class = "carouselBoxContentHeading">Coming Soon</h5>
+                                                                <p class = "carouselBoxContentBody">
+                                                                    Please anticipate its arrival.
+                                                                </p>
+                                                                <div class = "carouselBoxContentTagsContainer">
+                                                                    <p class = "carouselBoxContentTag">TBD</p>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Carousel Controls -->
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselGraphics" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselGraphics" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- FOOTER -->
+            <div class = "row" id = "footer">
+
+                <div class = "col-9" id = "leftside">
+                    <h3 class="mb-0 h3">AZ</h3>
+                    <hr>
+                    <div id = "subtext">
+                        <ul id = "footerLinks">
+                            <li><a href = "#">Top</a></li>
+                            <li><a href = "#programs">Programs</a></li>
+                            <li><a href = "#websites">Websites</a></li>
+                            <li><a href = "#graphics">Graphics</a></li>
+                        </ul>
+                        <p>
+                            Copyright 2022
+                        </p>
+                    </div>
+                </div>
+
+                <div class = "col-3" id = "socmedia">
+                    <p class = "adjustedPFont">Social Media</p>
+                    <div id = "socmediaIcons">
+                        <a href="https://github.com/azheng9096" target="_blank">
+                            <img src="images/github.png"/>
+                        </a>
+                        
+                        <a href="https://nyu.joinhandshake.com/stu/users/27360975" target="_blank">
+                            <img src="images/handshake.png"/>
+                        </a>
+        
+                        <a href="https://www.linkedin.com/in/anna-zheng-965866203/" target="_blank">
+                            <img src="images/linkedin.png"/>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+	</body>
+</html>

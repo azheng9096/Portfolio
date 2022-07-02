@@ -1,0 +1,83 @@
+/* HEADER */
+#header #display {
+    /* text-align: center; */
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+}
+
+#header #headerText {
+    margin-right: 2.5vw;
+}
+
+#header img {
+    margin-left: 2.5vw;
+}
+
+
+/* WEBSITES */
+#websitesRow .card {
+    width: 20rem;
+}
+
+
+/* [GRAPHICS, PROGRAMS] - CAROUSEL */
+/*
+ [] [] []
+ [] [] []
+*/
+
+.carouselContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* width: 100%; already specified by w-100 */
+
+    /*
+    height: 100vh;
+    max-height: 65vw;
+    */
+}
+
+.carouselContent .graphicsRow, .carouselContent .programsRow {
+    width: 100%;
+    display: flex;
+}
+
+.carouselContent .graphicsRow .graphicsCol, .carouselContent .programsRow .programsCol {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carouselBoxContentTag {
+    padding: 0.1vw 1.25vw;
+
+    border-radius: 1.5vw;
+    margin-right: 0.75vw;
+
+    font-size: calc(6.75px + 0.25vw);
+    letter-spacing: 0.5px;
+}
+
+
+/* FOOTER */
+#leftside, #socmedia {
+    height: 100px; /* #leftside fixed height needed for vertical hr to work */
+}
+
+/* this was modified by Bootstrap */
+#leftside hr:not([size]) {
+    height: 100%;
+}
+
+#footerLinks li {
+    margin-right: 10px;
+}
+
+#socmediaIcons img {
+    margin-right: 10px;
+}

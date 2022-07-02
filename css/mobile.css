@@ -1,0 +1,113 @@
+/* HEADER */
+#header #display {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#header #headerText {
+    margin-top: 2.5vw;
+}
+
+#header img {
+    margin-bottom: 2.5vw;
+}
+
+
+/* WEBSITES */
+#websitesRow .card {
+    width: 77.5vw;
+}
+
+
+/* [GRAPHICS, PROGRAMS] - CAROUSEL */
+/* [GRAPHICS] - CAROUSEL */
+/*
+ [] []
+ [] []
+ [] []
+*/
+/* [PROGRAMS] - CAROUSEL */
+/*
+ []
+ []
+ []
+ []
+*/
+
+.carouselContent {
+    display: flex;
+    justify-content: center;
+    /* width: 100%; already specified by w-100 */
+}
+
+#carouselPrograms .carouselContent {
+    flex-direction: column;
+}
+
+.carouselContent > * {
+    flex: 1; /* to divide width evenly for graphics carousel */
+}
+
+.carouselContent .graphicsRow, .carouselContent .programsRow {
+    display: flex;
+    flex-direction: column;
+}
+
+.carouselContent .graphicsRow .graphicsCol, .carouselContent .programsRow .programsCol {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.carouselBoxContentTag {
+    padding: 0.15vw 3.75vw;
+
+    border-radius: 3.5vw;
+
+    font-size: 2vw;
+    /* font-size: calc(5.25px + 0.25vw); */
+    letter-spacing: 0.5px;
+}
+
+.programsCol .carouselBoxContentTag {
+    margin-left: calc(3.5px + 0.25vw);
+    margin-right: calc(3.5px + 0.25vw);
+}
+
+
+/* FOOTER */
+#leftside {
+    flex-direction: column;
+}
+
+#leftside, #socmedia {
+    height: fit-content;
+}
+
+#leftside #subtext {
+    text-align: center;
+}
+
+#footerLinks li {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#socmedia p {
+    display: none;
+}
+
+#socmediaIcons {
+    flex-direction: column;
+}
+
+#socmediaIcons img {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}

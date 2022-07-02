@@ -1,0 +1,88 @@
+/* HEADER */
+#header #display {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#header #headerText {
+    margin-top: 2vw;
+}
+
+#header img {
+    margin-bottom: 2vw;
+}
+
+
+/* WEBSITES */
+#websitesRow .card {
+    width: 18rem;
+}
+
+
+/* [GRAPHICS, PROGRAMS] - CAROUSEL */
+/* Currently same settings as desktop */
+/*
+ [] [] []
+ [] [] []
+*/
+
+.carouselContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* width: 100%; already specified by w-100 */
+}
+
+.carouselContent .graphicsRow, .carouselContent .programsRow {
+    width: 100%;
+    display: flex;
+}
+
+.carouselContent .graphicsRow .graphicsCol, .carouselContent .programsRow .programsCol {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carouselBoxContentTag {
+    padding: 0.15vw 1.75vw;
+    margin-right: 2vw;
+
+    border-radius: 2vw;
+
+    font-size: calc(5.25px + 0.25vw);
+    letter-spacing: 0.5px;
+}
+
+
+/* FOOTER */
+#leftside, #socmedia {
+    height: 100px; /* #leftside fixed height needed for vertical hr to work */
+}
+
+/* this was modified by Bootstrap */
+#leftside hr:not([size]) {
+    height: 100%;
+}
+
+#footerLinks li {
+    margin-right: 10px;
+}
+
+#socmedia p {
+    display: none;
+}
+
+#socmediaIcons {
+    flex-direction: column;
+}
+
+#socmediaIcons img {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}

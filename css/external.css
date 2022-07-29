@@ -225,6 +225,24 @@ font-family: 'Raleway', sans-serif; */
     padding-bottom: 75px;
 }
 
+#websitesScroll::-webkit-scrollbar {
+    height: 4px;
+}
+  
+#websitesScroll::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.35); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.35); 
+}
+
+#websitesScroll::-webkit-scrollbar-thumb {
+    background: rgb(85, 85, 85);
+    
+    /*
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    */
+}
+
 #websitesRow {
     display: flex;
     width: fit-content;

@@ -152,26 +152,26 @@ font-family: 'Raleway', sans-serif; */
 }
 
 
-/* PROGRAMS */
-#programs {
+/* GAMES */
+#games {
     min-height: 100vh;
     background-color:rgb(0, 0, 0, 0.9);
 }
 
-#programsText {
+#gamesText {
     max-width: 90%;
     margin-top: 125px;
     margin-bottom: 125px;
 }
 
-#programsText h2 {
+#gamesText h2 {
     font-family: 'Raleway', sans-serif;
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 2px;
 }
 
-#programsText p {
+#gamesText p {
     font-family: 'Raleway', sans-serif;
     text-transform: uppercase;
     font-size: calc(10.5px + 0.25vw);
@@ -409,33 +409,33 @@ font-family: 'Raleway', sans-serif; */
 }
 
 
-/* GRAPHICS */
-#graphics {
+/* PROGRAMS */
+#programs {
     min-height: 100vh;
     background-color:rgb(0, 0, 0, 0.9);
 }
 
-#graphicsText {
+#programsText {
     max-width: 90%;
     margin-top: 125px;
     margin-bottom: 125px;
 }
 
-#graphicsText h2 {
+#programsText h2 {
     font-family: 'Raleway', sans-serif;
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 2px;
 }
 
-#graphicsText p {
+#programsText p {
     font-family: 'Raleway', sans-serif;
     text-transform: uppercase;
     font-size: calc(10.5px + 0.25vw);
 }
 
 
-/* [GRAPHICS] CAROUSEL */
+/* [PROGRAMS] CAROUSEL */
 .carouselWrapper {
     width: 100%;
 
@@ -455,7 +455,7 @@ font-family: 'Raleway', sans-serif; */
 
 /* SEE ADDITIONAL CAROUSEL CSS IN THE RESPONSIVE CSS FILES */
 
-.carouselContent .graphicsRow .graphicsCol {
+.carouselContent .programsRow .programsCol {
     margin: 5px;
 }
 
@@ -549,31 +549,31 @@ This should be used for darker overlay especially for first setup of .carouselBo
     background-position: center;
 }
 
-.graphicsCol .carouselBoxDiv {
+.programsCol .carouselBoxDiv {
     /*padding-bottom: 100%;*/ /* padding-bottom % based on width */
     aspect-ratio: 1 / 1;
 }
 
 @supports not (aspect-ratio: 1 / 1) {
-    .graphicsCol .carouselBoxDiv {
+    .programsCol .carouselBoxDiv {
         padding-bottom: 100%; /* padding-bottom % based on width */
     }
 
-    .graphicsCol .carouselBoxDiv::after {
+    .programsCol .carouselBoxDiv::after {
         content: ""; /* Needed so the div would appear */
     }
 }
 
-.programsCol .carouselBoxDiv {
+.gamesCol .carouselBoxDiv {
     aspect-ratio: 4 / 3;
 }
 
 @supports not (aspect-ratio: 4 / 3) {
-    .programsCol .carouselBoxDiv {
+    .gamesCol .carouselBoxDiv {
         padding-bottom: 75%; /* padding-bottom % based on width */
     }
 
-    .programsCol .carouselBoxDiv::after {
+    .gamesCol .carouselBoxDiv::after {
         content: ""; /* Needed so the div would appear */
     }
 }
@@ -599,16 +599,16 @@ This should be used for darker overlay especially for first setup of .carouselBo
 }
 
 /* set content (text) to be vertically and horizontally aligned at center */
-.programsCol .carouselBoxContent {
+.gamesCol .carouselBoxContent {
     justify-content: center;
     text-align: center;
 }
-.programsCol .carouselBoxContent .carouselBoxContentTagsContainer {
+.gamesCol .carouselBoxContent .carouselBoxContentTagsContainer {
     justify-content: center; /* to align tags to center */
 }
 
 /* set content (text) to be vertically aligned at end */
-.graphicsCol .carouselBoxContent {
+.programsCol .carouselBoxContent {
     justify-content: end;
 }
 

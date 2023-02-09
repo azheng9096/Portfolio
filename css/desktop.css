@@ -22,7 +22,7 @@
 }
 
 
-/* [GRAPHICS, PROGRAMS] - CAROUSEL */
+/* [PROGRAMS, GAMES] - CAROUSEL */
 /*
  [] [] []
  [] [] []
@@ -40,12 +40,12 @@
     */
 }
 
-.carouselContent .graphicsRow, .carouselContent .programsRow {
+.carouselContent .programsRow, .carouselContent .gamesRow {
     width: 100%;
     display: flex;
 }
 
-.carouselContent .graphicsRow .graphicsCol, .carouselContent .programsRow .programsCol {
+.carouselContent .programsRow .programsCol, .carouselContent .gamesRow .gamesCol {
     flex: 1;
 
     display: flex;

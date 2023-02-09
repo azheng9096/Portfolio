@@ -22,14 +22,14 @@
 }
 
 
-/* [GRAPHICS, PROGRAMS] - CAROUSEL */
-/* [GRAPHICS] - CAROUSEL */
+/* [PROGRAMS, GAMES] - CAROUSEL */
+/* [PROGRAMS] - CAROUSEL */
 /*
  [] []
  [] []
  [] []
 */
-/* [PROGRAMS] - CAROUSEL */
+/* [GAMES] - CAROUSEL */
 /*
  []
  []
@@ -43,20 +43,20 @@
     /* width: 100%; already specified by w-100 */
 }
 
-#carouselPrograms .carouselContent {
+#carouselGames .carouselContent {
     flex-direction: column;
 }
 
 .carouselContent > * {
-    flex: 1; /* to divide width evenly for graphics carousel */
+    flex: 1; /* to divide width evenly for programs carousel */
 }
 
-.carouselContent .graphicsRow, .carouselContent .programsRow {
+.carouselContent .programsRow, .carouselContent .gamesRow {
     display: flex;
     flex-direction: column;
 }
 
-.carouselContent .graphicsRow .graphicsCol, .carouselContent .programsRow .programsCol {
+.carouselContent .programsRow .programsCol, .carouselContent .gamesRow .gamesCol {
     flex: 1;
 
     display: flex;
@@ -75,7 +75,7 @@
     letter-spacing: 0.5px;
 }
 
-.programsCol .carouselBoxContentTag {
+.gamesCol .carouselBoxContentTag {
     margin-left: calc(3.5px + 0.25vw);
     margin-right: calc(3.5px + 0.25vw);
 }
